@@ -58,6 +58,7 @@ if [[ $OSTYPE == "linux-gnu" ]]; then
   chmod o-r $TMPFILE # Make file only readable by you
   gvim $VIM_OPTS $TMPFILE
   cat $TMPFILE | xclip -selection clipboard
+  xdotool key ctrl+v
 
 # OSX
 elif [[ $OSTYPE == "darwin"* ]]; then
